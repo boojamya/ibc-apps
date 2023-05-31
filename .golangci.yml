@@ -2,6 +2,7 @@ run:
   tests: true
   #   # timeout for analysis, e.g. 30s, 5m, default is 1m
   timeout: 5m
+  modules-download-mode: vendor  
 
 linters:
   disable-all: true
