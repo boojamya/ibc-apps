@@ -30,3 +30,6 @@ jobs:
         with:
           version: v1.29
           working-directory: ${{ matrix.workdir }}
+          skip-cache: true
+          skip-pkg-cache: true
+          skip-build-cache: true
