@@ -59,3 +59,4 @@ jobs:
         with:
           version: v1.28
           working-directory: ${{ matrix.workdir }}
+          args: --timeout=5m
