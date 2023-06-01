@@ -6,4 +6,6 @@
 echo "Resolving modules in $(pwd)"
 
 PATHS=$(find . -mindepth 2 -not -path "*/e2e/*" -type f -name go.mod -printf '{"workdir":"%h"},')
-echo "::set-output name=matrix::{\"include\":[${PATHS%?}]}"
+# echo "::set-output name=matrix::{\"include\":[${PATHS%?}]}"
+
+echo "{matrix}={\"include\":[${PATHS%?}]}" >> $GITHUB_OUTPUT
